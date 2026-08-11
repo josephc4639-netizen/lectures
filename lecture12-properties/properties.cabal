@@ -1,0 +1,24 @@
+name:          properties
+version:       0.1
+cabal-version: >= 1.10
+build-type:    Simple
+
+library
+  exposed-modules: Properties
+  hs-source-dirs:  .
+  build-depends:
+      base >= 4 && < 5,
+      QuickCheck >= 2.14 && < 2.16
+  default-language: Haskell2010
+  ghc-options: -Wall
+
+test-suite checks
+  type: exitcode-stdio-1.0
+  main-is: Checks.hs
+  hs-source-dirs: test
+  build-depends:
+      base >= 4 && < 5,
+      hspec >= 2.10 && < 2.12,
+      properties
+  default-language: Haskell2010
+  ghc-options: -Wall
